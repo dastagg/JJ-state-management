@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -21,7 +21,7 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('Building MainPage');
+    // print('Building MainPage');
     return ChangeNotifierProvider(
       create: (context) => AppData(),
       builder: (context, child) {
@@ -42,9 +42,9 @@ class Screen2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('Building Screen2');
-    return Container(
-      child: const Screen3(),
+    // print('Building Screen2');
+    return const SizedBox(
+      child: Screen3(),
     );
   }
 }
@@ -54,8 +54,8 @@ class Screen3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('Building Screen3');
-    return Container(
+    // print('Building Screen3');
+    return const SizedBox(
       child: Screen4(),
     );
   }
@@ -66,7 +66,7 @@ class Screen4 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('Building Screen4');
+    // print('Building Screen4');
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -76,7 +76,7 @@ class Screen4 extends StatelessWidget {
             onPressed: () {
               context.read<AppData>().changeData('Bruce Lee');
             },
-            child: Text('Change data'),
+            child: const Text('Change data'),
           ),
         ],
       ),

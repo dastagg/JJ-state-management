@@ -34,7 +34,7 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    print('Building MainPage');
+    // print('Building MainPage');
     return Scaffold(
       appBar: AppBar(
         title: Text(data),
@@ -56,8 +56,8 @@ class Screen2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('Building Screen2');
-    return Container(
+    // print('Building Screen2');
+    return SizedBox(
       child: Screen3(
         data: data,
         changeData: changeData,
@@ -75,8 +75,8 @@ class Screen3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('Building Screen3');
-    return Container(
+    // print('Building Screen3');
+    return SizedBox(
       child: Screen4(
         data: data,
         changeData: changeData,
@@ -99,7 +99,7 @@ class Screen4 extends StatefulWidget {
 class _Screen4State extends State<Screen4> {
   @override
   Widget build(BuildContext context) {
-    print('Building Screen4');
+    // print('Building Screen4');
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
