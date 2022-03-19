@@ -16,43 +16,48 @@ class MyApp extends StatelessWidget {
 }
 
 class MainPage extends StatelessWidget {
+  // final String data = 'John Rambo';
+  final String data = 'Chuck Norris';
   const MainPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     print('Building MainPage');
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Data Here'),
+        title: Text(data),
       ),
-      body: const Screen2(),
+      body: Screen2(data: data),
     );
   }
 }
 
 class Screen2 extends StatelessWidget {
-  const Screen2({Key? key}) : super(key: key);
+  final String data;
+  const Screen2({required this.data, Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     print('Building Screen2');
     return Container(
-      child: const Screen3(),
+      child: Screen3(data: data),
     );
   }
 }
 
 class Screen3 extends StatelessWidget {
-  const Screen3({Key? key}) : super(key: key);
+  final String data;
+  const Screen3({required this.data, Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     print('Building Screen3');
     return Container(
-      child: const Screen4(),
+      child: Screen4(data: data),
     );
   }
 }
 
 class Screen4 extends StatelessWidget {
-  const Screen4({Key? key}) : super(key: key);
+  final String data;
+  const Screen4({required this.data, Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     print('Building Screen4');
@@ -60,7 +65,7 @@ class Screen4 extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text('Data Here'),
+          Text(data),
           ElevatedButton(
             onPressed: () {},
             child: const Text('Change data'),
