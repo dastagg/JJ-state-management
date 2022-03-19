@@ -50,8 +50,10 @@ class _MainPageState extends State<MainPage> {
 class Screen2 extends StatelessWidget {
   final String data;
   final Function(String) changeData;
+
   const Screen2({required this.changeData, required this.data, Key? key})
       : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     print('Building Screen2');
@@ -67,8 +69,10 @@ class Screen2 extends StatelessWidget {
 class Screen3 extends StatelessWidget {
   final String data;
   final Function(String) changeData;
+
   const Screen3({required this.changeData, required this.data, Key? key})
       : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     print('Building Screen3');
@@ -84,6 +88,7 @@ class Screen3 extends StatelessWidget {
 class Screen4 extends StatefulWidget {
   final String data;
   final Function(String) changeData;
+
   const Screen4({required this.changeData, required this.data, Key? key})
       : super(key: key);
 
@@ -102,9 +107,7 @@ class _Screen4State extends State<Screen4> {
           Text(widget.data),
           ElevatedButton(
             onPressed: () {
-              setState(() {
-                widget.changeData('Bruce Lee');
-              });
+              widget.changeData('Bruce Lee');
             },
             child: const Text('Change data'),
           ),
